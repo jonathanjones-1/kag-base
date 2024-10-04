@@ -432,10 +432,10 @@ void ManageBow(CBlob@ this, ArcherInfo@ archer, RunnerMoveVars@ moveVars)
 		//	printf("charge_state " + charge_state );
 		if (hasarrow && charge_state == ArcherParams::no_arrows)
 		{
-			// (when key_action1 is down) reset charge state when:
-			// * the player has picks up arrows when inventory is empty
+			// (when key_action1 is down) set state to charging when:
+			// * the player has picked up arrows when inventory is empty
 			// * the player switches arrow type while charging bow
-			charge_state = ArcherParams::not_aiming;
+			charge_state = ArcherParams::charging;
 			just_action1 = true;
 		}
 
